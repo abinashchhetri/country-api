@@ -2,8 +2,9 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-console.log(process.env.PORT);
+
 
 export default {
   port: process.env.PORT,
+  mongo_api: process.env.DATABASE_API,
 };

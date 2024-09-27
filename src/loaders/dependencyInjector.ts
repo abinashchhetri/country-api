@@ -1,6 +1,12 @@
-export type dependencyInjectorType = {
-  name: String;
-  module;
+import { Container } from "typedi";
+
+type dependencyInjectorType = {
+  name: string;
+  model: unknown;
 }[];
 
-export default ({ name, module }: dependencyInjectorType) => {};
+export default (props: dependencyInjectorType) => {
+  props.forEach(({ name, model }) => {
+    Container.set(name, model);
+  });
+};
