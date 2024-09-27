@@ -17,3 +17,4 @@ export default async ({ server }) => {
     console.log(error);
   }
 };
+

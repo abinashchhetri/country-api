@@ -8,5 +8,6 @@ export default ({ router }: RoutesPropsType) => {
   authRouter.post("/login", async (req, res, next) => {
     const { email, password } = req.body;
     console.log(email, password);
+    return res.status(200).end()
   });
 };
